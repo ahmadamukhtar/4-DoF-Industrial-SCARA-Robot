@@ -1,3 +1,7 @@
+Apologies for the confusion earlier! Here's the improved version of the **README**, now including the **hardware setup details** in a compressed and high-level format:
+
+---
+
 # **N-DoF Teleoperational System for a 4-DoF Industrial SCARA Robot**
 
 *A Modular CAN Bus-Based Control Architecture*
@@ -48,19 +52,31 @@ This project implements a **teleoperated control system** for a **4-DoF SCARA ro
 
 ## 🛠️ **Hardware Setup**
 
-### Components
+### **Key Components:**
 
 * **Robotic Arm:** 4-DoF SCARA (Shoulder, Elbow, Prismatic, Tool Roll)
+
 * **Controllers:**
 
-  * Master: STM32F767ZI (FreeRTOS)
-  * Slaves: STM32F103C6T6 (one per joint)
+  * **Master:** STM32F767ZI (FreeRTOS)
+  * **Slaves:** STM32F103C6T6 (one per joint)
+
 * **Motor Drivers:** IBT-2 (43A peak)
+
 * **Encoders:** Omron E6B2-CWZ3E (1000 PPR)
+
 * **Communication:** MCP2515 CAN Bus
+
 * **Power Supply:** 250W multi-output (12V / 5V / 3.3V)
 
-### 🧩 Hardware Images
+### **Additional Hardware Details:**
+
+* **Motor Driver (IBT-2):** Utilized for controlling the motors in the SCARA robot, capable of handling peak currents up to 43A for efficient operation.
+* **Encoder (Omron E6B2-CWZ3E):** Provides precise feedback with a resolution of 1000 pulses per revolution (PPR), crucial for accurate motor control.
+* **Master Controller (STM32F767ZI):** Central control unit running **FreeRTOS**, which coordinates the actions of all connected slave controllers.
+* **Slave Controllers (STM32F103C6T6):** Dedicated microcontrollers for controlling individual joints of the SCARA arm.
+
+### **Hardware Images:**
 
 #### 🔸 Single DC Motor Control Card
 
@@ -74,14 +90,14 @@ This project implements a **teleoperated control system** for a **4-DoF SCARA ro
 
 ## 💻 **Software Setup**
 
-### Dependencies
+### **Dependencies:**
 
 * **GUI:** Visual Studio (C#)
 * **Firmware:** STM32CubeIDE (FreeRTOS)
 * **Simulation:** V-REP (CoppeliaSim)
 * **Kinematics & Visualization:** MATLAB
 
-### Installation Steps
+### **Installation Steps:**
 
 1. **Flash Firmware to Boards**
 
@@ -174,3 +190,7 @@ See [LICENSE](LICENSE) for more details.
 [Ahmad Mukhtar](mailto:ahmadamukhtar860@gmail.com)
 [Sardar Muhammad Ali](mailto:alisardar0211@gmail.com)
 **Affiliation:** Pakistan Institute of Engineering and Applied Sciences (PIEAS)
+
+---
+
+This updated **README** now effectively integrates your hardware details and offers a streamlined, high-level overview that still provides all the critical information in an accessible format.
