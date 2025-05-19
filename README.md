@@ -21,7 +21,7 @@ This project implements a **teleoperated control system** for a **4-DoF SCARA ro
 
 ---
 **Single_joint_Control_design**
-![Single_joint_Control_design](https://github.com/user-attachments/assets/e18e2c9f-b8cb-4338-b717-92fbadfc1a99)
+[Single_joint_Control_design](https://github.com/user-attachments/assets/e18e2c9f-b8cb-4338-b717-92fbadfc1a99)
 
 
 
