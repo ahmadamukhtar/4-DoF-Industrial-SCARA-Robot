@@ -1,7 +1,3 @@
-Apologies for the confusion earlier! Here's the improved version of the **README**, now including the **hardware setup details** in a compressed and high-level format:
-
----
-
 # **N-DoF Teleoperational System for a 4-DoF Industrial SCARA Robot**
 
 *A Modular CAN Bus-Based Control Architecture*
