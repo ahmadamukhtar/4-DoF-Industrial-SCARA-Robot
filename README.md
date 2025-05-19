@@ -5,7 +5,6 @@
 SCARA Robot Demo:
 https://drive.google.com/file/d/1_Rjsqo9XiC1aGFfsBElCld4F-KgaRdup/view?usp=sharing
  
-> 🎬 Click the image above to watch the full demo video  
 
 ## **📌 Overview**  
 This project implements a **teleoperated control system** for a **4-DoF SCARA robot** using a **distributed CAN bus architecture**. The system features:  
@@ -15,7 +14,7 @@ This project implements a **teleoperated control system** for a **4-DoF SCARA ro
 ✅ **Digital twin simulation** in **V-REP** for validation  
 ✅ **Industrial-grade robustness** (CAN bus, trapezoidal velocity profiles, safety limits)  
 
-**Research Paper:** [PDF Link](#) *(Upload your paper if public)*  
+**Research Paper:** [PDF Link](https://drive.google.com/file/d/1_Rjsqo9XiC1aGFfsBElCld4F-KgaRdup/view?usp=sharing) *(Upload your paper if public)*  
 
 ---
 
