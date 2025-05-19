@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"ahsan45\startup_stm32f103xb.o"
+"ahsan45\main.o"
+"ahsan45\stm32f1xx_it.o"
+"ahsan45\stm32f1xx_hal_msp.o"
+"ahsan45\stm32f1xx_hal_gpio_ex.o"
+"ahsan45\stm32f1xx_hal_tim.o"
+"ahsan45\stm32f1xx_hal_tim_ex.o"
+"ahsan45\stm32f1xx_hal.o"
+"ahsan45\stm32f1xx_hal_rcc.o"
+"ahsan45\stm32f1xx_hal_rcc_ex.o"
+"ahsan45\stm32f1xx_hal_gpio.o"
+"ahsan45\stm32f1xx_hal_dma.o"
+"ahsan45\stm32f1xx_hal_cortex.o"
+"ahsan45\stm32f1xx_hal_pwr.o"
+"ahsan45\stm32f1xx_hal_flash.o"
+"ahsan45\stm32f1xx_hal_flash_ex.o"
+"ahsan45\stm32f1xx_hal_exti.o"
+"ahsan45\stm32f1xx_hal_uart.o"
+"ahsan45\system_stm32f1xx.o"
+--strict --scatter "Ahsan45\Ahsan45.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Ahsan45.map" -o Ahsan45\Ahsan45.axf
