@@ -3,6 +3,9 @@
 
 
 **Scara Robot Demo Video:** [Video link](https://drive.google.com/file/d/1_Rjsqo9XiC1aGFfsBElCld4F-KgaRdup/view?usp=sharing) 
+**Single DC Motor Card:** [Image link](https://drive.google.com/file/d/10862qc_z-TdehtUcaU7PtxMIyGcl1ge_/view?usp=sharing) 
+**Single DC Motor Card:** [Image link](https://drive.google.com/file/d/1YYd2-KgDj5CAyKqFfTfsqcmL1sgpU0G8/view?usp=sharing) 
+
 
  
 
