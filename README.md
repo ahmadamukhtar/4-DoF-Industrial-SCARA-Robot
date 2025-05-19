@@ -2,7 +2,8 @@
 *A Modular CAN Bus-Based Control Architecture*  
 
 
-[![SCARA Robot Demo](assets/scara_robot.gif)](https://drive.google.com/uc?id=YOUR_FILE_ID)
+SCARA Robot Demo:
+https://drive.google.com/file/d/1_Rjsqo9XiC1aGFfsBElCld4F-KgaRdup/view?usp=sharing
  
 > 🎬 Click the image above to watch the full demo video  
 
