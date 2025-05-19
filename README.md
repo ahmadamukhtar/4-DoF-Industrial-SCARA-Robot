@@ -1,130 +1,165 @@
-# **N-DoF Teleoperational System for 4-DoF Industrial SCARA Robot**  
-*A Modular CAN Bus-Based Control Architecture*  
+# **N-DoF Teleoperational System for a 4-DoF Industrial SCARA Robot**
 
+*A Modular CAN Bus-Based Control Architecture*
 
-**Scara Robot Demo Video:** [Video link](https://drive.google.com/file/d/1_Rjsqo9XiC1aGFfsBElCld4F-KgaRdup/view?usp=sharing) 
-**Single DC Motor Card:** [Image link](https://drive.google.com/file/d/10862qc_z-TdehtUcaU7PtxMIyGcl1ge_/view?usp=sharing) 
-**Single DC Motor Card:** [Image link](https://drive.google.com/file/d/1YYd2-KgDj5CAyKqFfTfsqcmL1sgpU0G8/view?usp=sharing) 
-
-
- 
-
-## **📌 Overview**  
-This project implements a **teleoperated control system** for a **4-DoF SCARA robot** using a **distributed CAN bus architecture**. The system features:  
-✅ **Real-time joint & Cartesian control** via a **C# GUI**  
-✅ **Modular design** (scalable to N-DoF) with **STM32 master-slave controllers**  
-✅ **PID-based motor control** with **encoder feedback** (Omron E6B2-CWZ3E)  
-✅ **Digital twin simulation** in **V-REP** for validation  
-✅ **Industrial-grade robustness** (CAN bus, trapezoidal velocity profiles, safety limits)  
-
-**Research Paper:** [PDF Link](https://drive.google.com/file/d/1TaON4kpfjoUx2aGAXLBC6Rx7xFMzxIFO/view?usp=sharing) 
-
----
-**Single_joint_Control_design**
-![Single_joint_Control_design](https://github.com/user-attachments/assets/e18e2c9f-b8cb-4338-b717-92fbadfc1a99)
-
-
-
-## **🚀 Key Features**  
-| **Feature**               | **Description** |
-|---------------------------|----------------|
-| **📱 GUI Control** | C# application for joint/tool space control with real-time feedback |
-| **🔌 CAN Bus Communication** | STM32F767ZI (Master) + STM32F103C6T6 (Slaves) |
-| **🤖 Forward/Inverse Kinematics** | DH-parameter-based MATLAB & embedded C solutions |
-| **🎛️ PID Motor Control** | Closed-loop control with encoder feedback |
-| **📊 Digital Twin** | V-REP simulation for pre-deployment testing |
-| **🛡️ Safety Features** | Joint limits, emergency stop, collision avoidance |
+🎬 **SCARA Robot Demo Video:**
+[Watch on Google Drive](https://drive.google.com/file/d/1_Rjsqo9XiC1aGFfsBElCld4F-KgaRdup/view?usp=sharing)
 
 ---
 
-## **🛠️ Hardware Setup**  
-### **Components**  
-- **Robotic Arm**: 4-DoF SCARA (Shoulder, Elbow, Prismatic, Tool Roll)  
-- **Controllers**:  
-  - **Master**: STM32F767ZI (FreeRTOS)  
-  - **Slaves**: STM32F103C6T6 (per-joint control)  
-- **Motor Drivers**: IBT-2 (43A peak)  
-- **Encoders**: Omron E6B2-CWZ3E (1000 PPR)  
-- **Communication**: MCP2515 CAN Bus  
-- **Power Supply**: 250W Multi-output (12V/5V/3.3V)  
+## 📌 **Overview**
 
-### **Wiring Diagram**  
-![Hardware Setup](assets/wiring_diagram.png) *(Add your diagram here)*  
+This project implements a **teleoperated control system** for a **4-DoF SCARA robot** using a **distributed CAN bus architecture**. Key features include:
+
+✅ Real-time joint and Cartesian control via a **C# GUI**
+✅ Modular design (scalable to N-DoF) with **STM32 master-slave controllers**
+✅ PID-based motor control with encoder feedback (Omron E6B2-CWZ3E)
+✅ Digital twin simulation using **V-REP**
+✅ Industrial-grade robustness with CAN bus, trapezoidal velocity profiles, and safety limits
+
+📄 **Research Paper:** [View PDF](https://drive.google.com/file/d/1TaON4kpfjoUx2aGAXLBC6Rx7xFMzxIFO/view?usp=sharing)
 
 ---
 
-## **💻 Software Setup**  
-### **Dependencies**  
-- **GUI**: Visual Studio (C#)  
-- **Microcontrollers**: STM32CubeIDE (FreeRTOS)  
-- **Simulation**: V-REP (CoppeliaSim)  
-- **MATLAB**: Workspace visualization & kinematics validation  
+## 🧠 **System Design Diagrams**
 
-### **Installation**  
-1. **Flash Firmware**  
+### 🔹 Single Joint Control Design
+
+![Single Joint Control](https://github.com/user-attachments/assets/092f27b8-41de-4caa-8427-3c36ecd12dc9)
+
+### 🔹 Overall System Architecture
+
+![System Architecture](https://github.com/user-attachments/assets/8f77a8c7-51a6-4bb6-a9e0-299f9dd24c34)
+
+---
+
+## 🚀 **Key Features**
+
+| Feature                  | Description                                                         |
+| ------------------------ | ------------------------------------------------------------------- |
+| 📱 GUI Control           | C# application for joint/tool space control with real-time feedback |
+| 🔌 CAN Bus Communication | STM32F767ZI (Master) + STM32F103C6T6 (Slaves)                       |
+| 🤖 Kinematics            | DH-based forward/inverse kinematics in MATLAB and Embedded C        |
+| 🎛️ PID Motor Control    | Closed-loop control with encoder feedback                           |
+| 📊 Digital Twin          | V-REP simulation for testing and validation                         |
+| 🛡️ Safety Features      | Joint limits, emergency stop, and collision avoidance               |
+
+---
+
+## 🛠️ **Hardware Setup**
+
+### Components
+
+* **Robotic Arm:** 4-DoF SCARA (Shoulder, Elbow, Prismatic, Tool Roll)
+* **Controllers:**
+
+  * Master: STM32F767ZI (FreeRTOS)
+  * Slaves: STM32F103C6T6 (one per joint)
+* **Motor Drivers:** IBT-2 (43A peak)
+* **Encoders:** Omron E6B2-CWZ3E (1000 PPR)
+* **Communication:** MCP2515 CAN Bus
+* **Power Supply:** 250W multi-output (12V / 5V / 3.3V)
+
+### 🧩 Hardware Images
+
+#### 🔸 Single DC Motor Control Card
+
+![DC Motor Card](https://github.com/user-attachments/assets/e4365a5b-704c-4e05-b07a-346041688872)
+
+#### 🔸 Slave Controller Stack (3-DoF)
+
+![Slave Controller Stack](https://github.com/user-attachments/assets/a199cb1e-f04a-4eff-b90a-0f6c1b4205f9)
+
+---
+
+## 💻 **Software Setup**
+
+### Dependencies
+
+* **GUI:** Visual Studio (C#)
+* **Firmware:** STM32CubeIDE (FreeRTOS)
+* **Simulation:** V-REP (CoppeliaSim)
+* **Kinematics & Visualization:** MATLAB
+
+### Installation Steps
+
+1. **Flash Firmware to Boards**
+
    ```bash
    git clone https://github.com/yourusername/scara-can-control.git
    cd scara-can-control/firmware
-   open STM32CubeIDE project and flash to master/slave boards
    ```
 
-2. **Run GUI**  
+   Open the STM32CubeIDE project and flash to Master and Slave boards.
+
+2. **Run GUI**
+
    ```bash
    cd scara-can-control/gui
-   open Visual Studio solution and build
    ```
 
-3. **V-REP Simulation**  
-   - Import `scara_model.ttm` into V-REP  
-   - Run `simulation_script.lua`  
+   Open the Visual Studio solution and build the GUI.
+
+3. **Simulation in V-REP**
+
+   * Import `scara_model.ttm` into V-REP
+   * Run the simulation script `simulation_script.lua`
 
 ---
 
-## **🎯 Demo & Usage**  
-### **1. Joint Space Control**  
-![GUI Joint Control](assets/gui_joint.png)  
-- Set desired angles for each joint via sliders.  
+## 🎯 **Demo & Usage**
 
-### **2. Tool Space Control**  
-![GUI Cartesian Control](assets/gui_cartesian.png)  
-- Input (x,y,z) coordinates → Inverse kinematics computes joint angles.  
+### 🔹 Joint Space Control
 
-### **3. CAN Bus Monitoring**  
+![GUI Joint Control](assets/gui_joint.png)
+Adjust joint angles via sliders with real-time feedback.
+
+### 🔹 Tool (Cartesian) Space Control
+
+![GUI Cartesian Control](assets/gui_cartesian.png)
+Enter (x, y, z) coordinates – inverse kinematics maps to joint angles.
+
+### 🔹 CAN Bus Command Structure (Embedded C)
+
 ```c
-// Example CAN message (Master → Slave)
 typedef struct {
   uint16_t joint_id;
   float target_angle;
-  uint8_t control_mode;  // 0=position, 1=velocity
+  uint8_t control_mode;  // 0 = position, 1 = velocity
 } CAN_Command;
 ```
 
 ---
 
-## **📈 Performance Metrics**  
-| **Parameter**       | **Value**       |
-|---------------------|-----------------|
-| Positioning Accuracy | ±0.1mm         |
-| Max Payload         | 2kg            |
-| Communication Rate  | 1Mbps (CAN)    |
-| Control Frequency   | 1kHz (PID loop)|
+## 📈 **Performance Metrics**
+
+| Parameter            | Value        |
+| -------------------- | ------------ |
+| Positioning Accuracy | ±0.1 mm      |
+| Max Payload          | 2 kg         |
+| Communication Rate   | 1 Mbps (CAN) |
+| Control Frequency    | 1 kHz (PID)  |
 
 ---
 
-## **🔮 Future Work**  
-- [ ] **Machine Vision Integration** (OpenCV/ROS)  
-- [ ] **Haptic Feedback** for force reflection  
-- [ ] **EtherCAT Upgrade** for lower latency  
-- [ ] **Autonomous Pick-and-Place** with path planning  
+## 🔮 **Future Work**
+
+* [ ] Machine vision integration (OpenCV / ROS)
+* [ ] Haptic feedback for force reflection
+* [ ] Upgrade to EtherCAT for lower latency
+* [ ] Autonomous pick-and-place with path planning
 
 ---
 
-## **📜 License**  
-MIT License - See [LICENSE](LICENSE) for details.  
+## 📜 **License**
+
+This project is licensed under the **MIT License**.
+See [LICENSE](LICENSE) for more details.
 
 ---
 
-## **🙌 Credits & Citation**  
+## 🙌 **Credits & Citation**
+
 ```bibtex
 @article{mukhtar2024scara,
   title={N-DoF Teleoperational System for 4-DoF Industrial SCARA Robot},
@@ -135,14 +170,7 @@ MIT License - See [LICENSE](LICENSE) for details.
 }
 ```
 
-**Developed by:**  
-[Ahmad Mukhtar](mailto:ahmadamukhtar860@gmail.com) | [Sardar Muhammad Ali](mailto:alisardar0211@gmail.com)  
-**Affiliation:** Pakistan Institute of Engineering and Applied Sciences (PIEAS)  
-
----
-
-**🌟 Star this repo if you found it useful!**  
-**🐛 Report issues [here](#)**  
-
-*(Replace placeholder links/GIFs with your actual content. Customize further based on your project’s specifics!)*  
-
+**Developed by:**
+[Ahmad Mukhtar](mailto:ahmadamukhtar860@gmail.com)
+[Sardar Muhammad Ali](mailto:alisardar0211@gmail.com)
+**Affiliation:** Pakistan Institute of Engineering and Applied Sciences (PIEAS)
