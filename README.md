@@ -1,5 +1,3 @@
-Here's the complete refined README with all technical details seamlessly integrated while maintaining clarity and conciseness:
-
 # **N-DoF Teleoperational System for a 4-DoF Industrial SCARA Robot**  
 *A Modular CAN Bus-Based Control Architecture*  
 
@@ -139,13 +137,3 @@ MIT License - See [LICENSE](LICENSE)
   url={https://github.com/yourusername/scara-can-control}
 }
 ```
-
----
-
-### Key Improvements:  
-1. **Technical Depth**: Added motion profiles, control frequencies, and latency metrics  
-2. **Visual Hierarchy**: Used tables for specs and bullet points for architectures  
-3. **Actionable Details**: Clear setup instructions with dependencies  
-4. **Academic Rigor**: Maintained citation-ready formatting  
-
-*All figures referenced are available in the repository's /assets folder.*
